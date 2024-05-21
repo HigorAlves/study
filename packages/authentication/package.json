@@ -1,0 +1,17 @@
+{
+  "name": "@repo/authentication",
+  "private": true,
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "eslintConfig": {
+	"extends": ["@repo/eslint-config/node.js"]
+  },
+  "prettier": "@repo/prettier",
+  "devDependencies": {
+	"@repo/eslint-config": "*",
+	"@repo/tsconfig": "*",
+	"@repo/prettier": "*",
+	"typescript": "^5.3.3"
+  }
+}
