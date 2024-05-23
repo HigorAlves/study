@@ -2,10 +2,11 @@
  "name": "@repo/unit",
  "private": true,
  "version": "0.0.0",
- "main": "src/index.ts",
+ "main": "dist/index.mjs",
  "types": "src/index.ts",
  "scripts": {
-  "dev": "tsx src/index.ts"
+  "dev": "tsx src/index.ts",
+  "build": "tsup src/index.ts"
  },
  "eslintConfig": {
   "extends": [
@@ -17,10 +18,16 @@
   "@repo/eslint-config": "*",
   "@repo/prettier": "*",
   "@repo/tsconfig": "*",
+  "@types/node": "^20.12.12",
+  "tsup": "^8.0.2",
   "tsx": "^4.10.5",
   "typescript": "^5.3.3"
  },
  "dependencies": {
+  "@apollo/server": "^4.10.4",
+  "@swc/core": "^1.5.7",
+  "@graphql-tools/graphql-file-loader": "^8.0.1",
+  "@graphql-tools/load": "^8.0.2",
   "inversify": "^6.0.2",
   "reflect-metadata": "^0.2.2"
  }

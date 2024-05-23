@@ -1,10 +1,14 @@
-import { UnitService } from '../services/unit.service'
 import { inject, injectable } from 'inversify'
-import { TYPES } from '../types/types'
+
+import { UnitService } from '../services/unit.service'
 
 @injectable()
 export class UnitHandler {
-	@inject(TYPES.service) private service: UnitService
+	private service: UnitService
+
+	constructor(@inject(UnitService) service: UnitService) {
+		this.service = service
+	}
 
 	public get(): string {
 		return this.service.get()

@@ -1,9 +1,3 @@
-import { unitContainer } from './inversify.config'
-import { Handler } from './types/interfaces'
-import { TYPES } from './types/types'
+import { unitResolver } from './resolvers/unit.resolver'
 
-const Unit = unitContainer.get<Handler>(TYPES.handler)
-
-console.log(Unit.get())
-
-export { Unit }
+export { unitResolver }
